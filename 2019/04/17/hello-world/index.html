@@ -81,16 +81,17 @@
 
 
 
-<meta name="description" content="做自己爱做的事，爱自己在做的事！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Retltdotr@个人博客">
-<meta property="og:url" content="https://retltdotr.top/index.html">
+<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="https://retltdotr.top/2019/04/17/hello-world/index.html">
 <meta property="og:site_name" content="Retltdotr@个人博客">
-<meta property="og:description" content="做自己爱做的事，爱自己在做的事！">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-16T06:09:08.149Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Retltdotr@个人博客">
-<meta name="twitter:description" content="做自己爱做的事，爱自己在做的事！">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://retltdotr.top/">
+  <link rel="canonical" href="https://retltdotr.top/2019/04/17/hello-world/">
 
 
 
 
 
-  <title>Retltdotr@个人博客</title>
+  <title>Hello World | Retltdotr@个人博客</title>
   
 
 
@@ -145,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,296 +301,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://retltdotr.top/2019/04/17/struts2_02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Retltdotr">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Retltdotr@个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/17/struts2_02/" itemprop="url">struts2_02</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T22:05:01+08:00">
-                2019-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/04/17/struts2_02/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/17/struts2_02/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="struts2学习-02"><a href="#struts2学习-02" class="headerlink" title="struts2学习_02"></a>struts2学习_02</h1><h2 id="struts2执行过程"><a href="#struts2执行过程" class="headerlink" title="struts2执行过程"></a>struts2执行过程</h2><ol>
-<li><strong>浏览器向服务器发送请求。</strong>  <pre><code>比如：localhost:8080/struts2_test1/userAction.action，Tomcat接收到请求，Tomcatserver来选择处理这个请求的Web应用，然后由struts2_test1这个web项目处理请求。
-</code></pre></li>
-<li><p><strong>Tomcat服务器读取struts2_test1项目下的web.xml文件。</strong> </p>
-<pre><code>在web.xml下找到配置的struts2过滤器，请求会经过过滤器，`&lt;url-pattern&gt;/*&lt;/url-pattern&gt;`表示过滤所有请求。过滤器会在服务器启动时创建。
-</code></pre></li>
-<li><p><strong>struts过滤器实现的功能</strong>、<br>   第一步：获取请求路劲，得到路径中的userAction值<br>   第二步：到src目录下找到struts.xml文件，使用dom4j解析得到xml文件中的内容，把拿到userAction值到struts.xml，找到action标签，匹配name是否相同<br>   第三步：匹配name相同，找到所在action标签的class属性值，得到action全路径，使用反射实现功能。<br>   反射实现过程：<br>   （1）.得到class。<code>class clazz = class.forName(&quot;action全路径&quot;)</code><br>   （2）.得到名称是execute的方法。<code>Method method = clazz.getMethod(&quot;execute&quot;)</code><br>   （3）.方法执行。<code>Object obj = method.Invoke()</code><br>   第四步：得到action的返回值，回到struts.xml中找到action标签下的result标签，配置result标签的name属性值，值一样跳转至相应的页面</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://retltdotr.top/2019/04/17/struts2_01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Retltdotr">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Retltdotr@个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/17/struts2_01/" itemprop="url">struts2_01</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T22:05:01+08:00">
-                2019-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/04/17/struts2_01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/17/struts2_01/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="struts2学习-01"><a href="#struts2学习-01" class="headerlink" title="struts2学习_01"></a>struts2学习_01</h1><h2 id="一、struts2概述"><a href="#一、struts2概述" class="headerlink" title="一、struts2概述"></a>一、struts2概述</h2><p>1、Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，在MVC设计模式中，Struts2作为控制器(Controller)来建立模型与视图的数据交互。2、Struts 2是Struts的下一代产品，是在 struts 1和WebWork的技术基础上进行了合并的全新的Struts 2框架。其全新的Struts 2的体系结构与Struts 1的体系结构差别巨大。Struts 2以WebWork为核心，采用拦截器的机制来处理用户的请求，这样的设计也使得业务逻辑控制器能够与ServletAPI完全脱离开，所以Struts 2可以理解为WebWork的更新产品。虽然从Struts 1到Struts 2有着太大的变化，但是相对于WebWork，Struts 2的变化很小。</p>
-<h2 id="二、struts2框架入门"><a href="#二、struts2框架入门" class="headerlink" title="二、struts2框架入门"></a>二、struts2框架入门</h2><ul>
-<li>struts2版本为struts-2.3.24</li>
-<li>第一步：导入struts2框架jar包<pre><code>（1）从struts2官网下载完整包解压，在lib目录中有jar包，不能把这些jar包都导入项目中，其中很多jar包用不上
-（2）到apps目录中，找到示例程序解压，然后找到示例程序下的lib目录，复制里面的jar包到自己新建的web项目中    
-</code></pre></li>
-<li>第二部：在web.xml中配置struts过滤器</li>
-</ul>
-<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">filter</span>&gt;</span><br><span class="line">    &lt;<span class="built_in">filter</span>-name&gt;struts&lt;/<span class="built_in">filter</span>-name&gt;</span><br><span class="line">    &lt;<span class="built_in">filter</span>-<span class="keyword">class</span>&gt;org.apache.struts2.dispatcher.ng.<span class="built_in">filter</span>.StrutsPrepareAndExecuteFilter&lt;/<span class="built_in">filter</span>-<span class="keyword">class</span>&gt;</span><br><span class="line">  &lt;/<span class="built_in">filter</span>&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;<span class="built_in">filter</span>-mapping&gt;</span><br><span class="line">    &lt;<span class="built_in">filter</span>-name&gt;struts&lt;/<span class="built_in">filter</span>-name&gt;</span><br><span class="line">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">  &lt;/<span class="built_in">filter</span>-mapping&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>第三步：创建action<br>  （1）新建一个普通类，然后在类中写execute方法</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">HelloAction</span> <span class="keyword">extends</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *(1)每次访问servlet时，都会执行service方法</span></span><br><span class="line"><span class="comment">     *(2)每次访问action,默认执行execute方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> static <span class="keyword">final</span> long serialVersionUID = <span class="number">1</span>L;</span><br><span class="line"></span><br><span class="line">    public <span class="type">String</span> execute() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"ok"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>第四步：配置action的访问路径<br>  （1）创建struts2核心配置文件， 核心配置文件名称和位置是固定的， 位置必须在src下面，名称 struts.xml<br>  （2）引入dtd约束</p>
-</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE struts PUBLIC</span></span><br><span class="line"><span class="meta">    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"</span></span><br><span class="line"><span class="meta">    "http://struts.apache.org/dtds/struts-2.3.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
-<pre><code>（3）struts.xml配置action访问路径
-</code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- package标签的name属性值为包名，extends="struts-default"就是继承struts-default.xml，它里面定义了许多跳转类型、拦截器等一些常用的东西，namespace：命名空间，默认为'/'表示webapp根目录 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"hello"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span> <span class="attr">namespace</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">    	<span class="comment">&lt;!-- action标签的name属性值为访问名称--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"userAction"</span> <span class="attr">class</span>=<span class="string">"cn.com.action.HelloAction"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"ok"</span>&gt;</span>/hello.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>然后把项目部署到Tomcat中，在浏览器中访问，访问路劲为localhost:8080/struts2_test1/userAction.action，<br>localhost:8080表示本机8080端口，也就是Tomcat 服务器端口，后面接上项目名和action名，用“/”隔开</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -620,9 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/17/hello-world/" itemprop="url">Hello World</a></h1>
+          <h1 class="post-title" itemprop="name headline">Hello World</h1>
         
 
         <div class="post-meta">
@@ -682,9 +393,7 @@
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -694,8 +403,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-          
-        
       
     </div>
     
@@ -712,12 +419,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/17/struts2_01/" rel="prev" title="struts2_01">
+                struts2_01 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -727,10 +450,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -738,6 +462,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -758,8 +489,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -808,6 +548,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -948,6 +704,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
