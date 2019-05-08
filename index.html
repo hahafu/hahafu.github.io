@@ -296,6 +296,278 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://retltdotr.top/2019/05/08/struts2_05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Retltdotr">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Retltdotr@个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/08/struts2_05/" itemprop="url">struts2_05</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-08T21:42:40+08:00">
+                2019-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/08/struts2_05/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/08/struts2_05/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="struts2学习-05"><a href="#struts2学习-05" class="headerlink" title="struts2学习_05"></a>struts2学习_05</h1><h2 id="一、ognl概述"><a href="#一、ognl概述" class="headerlink" title="一、ognl概述"></a>一、ognl概述</h2><p> OGNL是Object-Graph Navigation Language的缩写，它是一种功能强大的表达式语言，通过它简单一致的表达式语法，可以存取对象的任意属性，调用对象的方法，遍历整个对象的结构图，实现字段类型转化等功能。它使用相同的表达式去存取对象的属性。</p>
+<ul>
+<li>EL表达式在jsp页面获取域对象的值</li>
+<li>OGNL是一种表达式，这个表达式功能更加强大<br>在struts2里面操作值栈数据<br>一般把ognl在struts2操作：和struts2标签一起使用操作值栈</li>
+<li>OGNL不是struts2的一部分，单独的开源项目，struts2默认表达式为OGNL，经常和struts2一起使用。</li>
+<li>使用时需要导入ognl的jar包，struts2提供jar包<h2 id="二、ognl入门案例"><a href="#二、ognl入门案例" class="headerlink" title="二、ognl入门案例"></a>二、ognl入门案例</h2><h3 id="1-使用ognl-struts2标签实现计算字符串长度"><a href="#1-使用ognl-struts2标签实现计算字符串长度" class="headerlink" title="1 使用ognl+struts2标签实现计算字符串长度"></a>1 使用ognl+struts2标签实现计算字符串长度</h3></li>
+<li>支持对象方法调用</li>
+<li>在Java代码中，查看字符串长度用`.length()<h3 id="2-使用struts2标签"><a href="#2-使用struts2标签" class="headerlink" title="2 使用struts2标签"></a>2 使用struts2标签</h3>（1）使用jstl时，导入jar包之外，还要在jsp页面引入标签库。<br>使用struts2标签的时候，在jsp中引入标签库</li>
+</ul>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">%</span>@ taglib uri=<span class="string">"/struts-tags"</span> prefix=<span class="string">"s"</span> <span class="meta">%</span>&gt;</span><br></pre></td></tr></table></figure>
+<p> （2）使用struts实现操作</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 使用ognl和struts2标签实现计算字符串长度  value属性值：ognl表达式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"'hello'.length()"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、值栈"><a href="#三、值栈" class="headerlink" title="三、值栈"></a>三、值栈</h2><h3 id="1、web阶段，在servlet里面进行操作，把数据放到域对象里面，在页面中使用el表达式获取到。域对象表示在一定范围内，存值和取值。"><a href="#1、web阶段，在servlet里面进行操作，把数据放到域对象里面，在页面中使用el表达式获取到。域对象表示在一定范围内，存值和取值。" class="headerlink" title="1、web阶段，在servlet里面进行操作，把数据放到域对象里面，在页面中使用el表达式获取到。域对象表示在一定范围内，存值和取值。"></a>1、web阶段，在servlet里面进行操作，把数据放到域对象里面，在页面中使用el表达式获取到。域对象表示在一定范围内，存值和取值。</h3><h3 id="2、在struts2里面提供本身一种存储机制，类似于域对象，是值栈，可以存值和取值"><a href="#2、在struts2里面提供本身一种存储机制，类似于域对象，是值栈，可以存值和取值" class="headerlink" title="2、在struts2里面提供本身一种存储机制，类似于域对象，是值栈，可以存值和取值"></a>2、在struts2里面提供本身一种存储机制，类似于域对象，是值栈，可以存值和取值</h3><ul>
+<li>在action里面把数据放到值栈里面，在页面中获取到值栈数据</li>
+</ul>
+<h3 id="3、servlet和action的区别"><a href="#3、servlet和action的区别" class="headerlink" title="3、servlet和action的区别"></a>3、servlet和action的区别</h3><ul>
+<li>Servlet：默认在第一次访问的时候创建，只创建一次，单实例对象</li>
+<li>Action:访问时创建，每次访问action都会创建对象，创建多次，多实例对象</li>
+</ul>
+<h3 id="4、值栈存储位置"><a href="#4、值栈存储位置" class="headerlink" title="4、值栈存储位置"></a>4、值栈存储位置</h3><ul>
+<li><strong>每次访问action时，都会创建action对象</strong></li>
+<li><strong>在每个action对象里只有一个值栈对象</strong></li>
+</ul>
+<h2 id="四、如何获取值栈对象"><a href="#四、如何获取值栈对象" class="headerlink" title="四、如何获取值栈对象"></a>四、如何获取值栈对象</h2><h3 id="获取值栈对象的多种方式"><a href="#获取值栈对象的多种方式" class="headerlink" title="获取值栈对象的多种方式"></a>获取值栈对象的多种方式</h3><h4 id="1、常用方式：使用ActionContext类里的方法得到值栈对象"><a href="#1、常用方式：使用ActionContext类里的方法得到值栈对象" class="headerlink" title="1、常用方式：使用ActionContext类里的方法得到值栈对象"></a>1、常用方式：使用ActionContext类里的方法得到值栈对象</h4><figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取ActionContext类的对象</span></span><br><span class="line"> ActionContext context =ActionContext.getContext();</span><br><span class="line"> <span class="comment">//调用方法得到值栈对象</span></span><br><span class="line">  ValueStack stack = context.getValueStack();</span><br></pre></td></tr></table></figure>
+<h4 id="2、使用-Request-对象获取值栈对象"><a href="#2、使用-Request-对象获取值栈对象" class="headerlink" title="2、使用 Request 对象获取值栈对象"></a>2、使用 Request 对象获取值栈对象</h4><figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过 ServletActionContext 类的静态方法获取 Request 对象</span></span><br><span class="line">HttpServletRequest request = ServletActionContext.getRequest();</span><br><span class="line"><span class="comment">//调用 Request 对象的方法，并传入 ServletActionContext 类的静态常量，获取值栈对象</span></span><br><span class="line">ValueStack stack = (ValueStack) request.getAttribute(ServletActionContext.STRUTS_VALUESTACK_KEY);</span><br></pre></td></tr></table></figure>
+<h2 id="五、值栈的内部结构"><a href="#五、值栈的内部结构" class="headerlink" title="五、值栈的内部结构"></a>五、值栈的内部结构</h2><h3 id="值栈包含两大部分，CompoundRoot和context"><a href="#值栈包含两大部分，CompoundRoot和context" class="headerlink" title="值栈包含两大部分，CompoundRoot和context"></a>值栈包含两大部分，CompoundRoot和context</h3><h3 id="1、第一部分，CompoundRoot，结构时list集合"><a href="#1、第一部分，CompoundRoot，结构时list集合" class="headerlink" title="1、第一部分，CompoundRoot，结构时list集合"></a>1、第一部分，CompoundRoot，结构时list集合</h3><h3 id="2、第二部分，context，常称为contextMap，结构是map集合"><a href="#2、第二部分，context，常称为contextMap，结构是map集合" class="headerlink" title="2、第二部分，context，常称为contextMap，结构是map集合"></a>2、第二部分，context，常称为contextMap，结构是map集合</h3><ul>
+<li>context存储对象引用</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>key(固定)</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>request</td>
+<td>request对象引用</td>
+</tr>
+<tr>
+<td>session</td>
+<td>session对象引用</td>
+</tr>
+<tr>
+<td>application</td>
+<td>application对象引用</td>
+</tr>
+<tr>
+<td>parameters</td>
+<td>传递相关参数</td>
+</tr>
+<tr>
+<td>attr</td>
+</tr>
+</tbody>
+</table>
+<p><strong>attr：Attribute,向三个域对象防值，名称都相同setAttribute(“name”,value); 使用attr操作，获取域对象里面的值，获取域范围最小的值</strong></p>
+<h3 id="3、struts2里面标签-s-debug，使用这个标签可以查看值栈结构和存储值"><a href="#3、struts2里面标签-s-debug，使用这个标签可以查看值栈结构和存储值" class="headerlink" title="3、struts2里面标签 s:debug，使用这个标签可以查看值栈结构和存储值"></a>3、struts2里面标签 s:debug，使用这个标签可以查看值栈结构和存储值</h3><ol>
+<li>访问action，执行action的方法有返回值，配置返回值到jsp页面中，在jsp页面中使用这个<code>s:debug</code>标签<br>在页面点击超链接看到结构<br><img src="https://img-blog.csdnimg.cn/20190506233348998.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xpbmdIYWlfWg==,size_16,color_FFFFFF,t_70" alt="值栈结构"><ol start="2">
+<li>在action没有做任何操作，栈顶元素是 action引用<br><strong>action对象里面有值栈对象<br>值栈对象里面有action引用</strong><h2 id="六、向值栈放入数据"><a href="#六、向值栈放入数据" class="headerlink" title="六、向值栈放入数据"></a>六、向值栈放入数据</h2><h3 id="1-向值栈放数据"><a href="#1-向值栈放数据" class="headerlink" title="1 向值栈放数据"></a>1 向值栈放数据</h3><h4 id="1-1、第一种-获取值栈对象，调用值栈对象的set方法"><a href="#1-1、第一种-获取值栈对象，调用值栈对象的set方法" class="headerlink" title="1.1、第一种 获取值栈对象，调用值栈对象的set方法"></a>1.1、第一种 获取值栈对象，调用值栈对象的set方法</h4></li>
+</ol>
+</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种方式：使用值栈对象的set方法</span></span><br><span class="line"><span class="comment">//获取值栈对象</span></span><br><span class="line">ActionContext context = ActionContext.getContext();</span><br><span class="line">ValueStack <span class="built_in">stack</span> = context.getValueStack();</span><br><span class="line"><span class="comment">//调用set方法</span></span><br><span class="line"><span class="built_in">stack</span>.<span class="built_in">set</span>(<span class="string">"username"</span>, <span class="string">"value"</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="1-2、第二种-获取值栈对象，调用值栈对象的push方法"><a href="#1-2、第二种-获取值栈对象，调用值栈对象的push方法" class="headerlink" title="1.2、第二种 获取值栈对象，调用值栈对象的push方法"></a>1.2、第二种 获取值栈对象，调用值栈对象的push方法</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取值栈对象</span></span><br><span class="line">ActionContext context = ActionContext.getContext();</span><br><span class="line">ValueStack <span class="built_in">stack</span> = context.getValueStack();</span><br><span class="line"><span class="comment">//调用set方法</span></span><br><span class="line"><span class="built_in">stack</span>.<span class="built_in">set</span>(<span class="string">"username"</span>, <span class="string">"value"</span>);</span><br><span class="line">       </span><br><span class="line"><span class="comment">//调用push方法</span></span><br><span class="line"> <span class="built_in">stack</span>.push(<span class="string">"value"</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="1-3、第三种-在action中定义变量，生成变量的get方法"><a href="#1-3、第三种-在action中定义变量，生成变量的get方法" class="headerlink" title="1.3、第三种 在action中定义变量，生成变量的get方法"></a>1.3、第三种 在action中定义变量，生成变量的get方法</h4><h3 id="2、向值栈放对象"><a href="#2、向值栈放对象" class="headerlink" title="2、向值栈放对象"></a>2、向值栈放对象</h3><ol>
+<li>第一步 定义对象变量</li>
+<li>第二部 生成变量的get方法</li>
+<li>在执行的方法里向对象设置值</li>
+</ol>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、定义对象变量</span></span><br><span class="line"><span class="keyword">private</span> User user = <span class="keyword">new</span> User();</span><br><span class="line"><span class="comment">//生成get方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="function">User <span class="title">getUser</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> user;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="function">String <span class="title">execute</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">//向值栈的user里放数据</span></span><br><span class="line">    user.setUsername(<span class="string">"hello"</span>);</span><br><span class="line">    user.setPassword(<span class="string">"123456"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3、向值栈里放list集合"><a href="#3、向值栈里放list集合" class="headerlink" title="3、向值栈里放list集合"></a>3、向值栈里放list集合</h3><ol>
+<li>第一步 定义list集合变量</li>
+<li>第二步 生成变量的get方法</li>
+<li>执行的方法里面向list集合设置值</li>
+</ol>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义list变量</span></span><br><span class="line">   <span class="keyword">private</span> <span class="built_in">List</span>&lt;User&gt; <span class="built_in">list</span> = <span class="literal">new</span> ArrayList&lt;User&gt;();</span><br><span class="line">   <span class="comment">//生成get方法</span></span><br><span class="line">   <span class="keyword">public</span> <span class="built_in">List</span>&lt;User&gt; getList() &#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="built_in">list</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   @Override</span><br><span class="line">   <span class="keyword">public</span> <span class="built_in">String</span> execute() throws Exception &#123;</span><br><span class="line">       <span class="comment">//向list中设置值</span></span><br><span class="line">       User user = <span class="literal">new</span> User();</span><br><span class="line">       user.setUsername(<span class="string">"hello"</span>);</span><br><span class="line">       user.setPassword(<span class="string">"123456"</span>);</span><br><span class="line">       <span class="built_in">list</span>.add(user);</span><br><span class="line">       <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="七、从值栈获取数据"><a href="#七、从值栈获取数据" class="headerlink" title="七、从值栈获取数据"></a>七、从值栈获取数据</h2><p><strong>使用struts2的标签+ognl表达式获取值栈数据</strong><br><strong>&lt;s:property value=”ognl表达式”/&gt;</strong></p>
+<h3 id="1、获取字符串"><a href="#1、获取字符串" class="headerlink" title="1、获取字符串"></a>1、获取字符串</h3><ol>
+<li>向值栈放字符串</li>
+</ol>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String userName;</span><br><span class="line"><span class="keyword">public</span> <span class="function">String <span class="title">getUserName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> userName;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="function">String <span class="title">execute</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    userName = <span class="string">"hello"</span>;    </span><br><span class="line">    <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>在jsp使用struts2标签+ognl表达式获取</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 获取字符串 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"userName"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2、获取对象"><a href="#2、获取对象" class="headerlink" title="2、获取对象"></a>2、获取对象</h3><ol>
+<li>向值栈放对象</li>
+</ol>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> User user = <span class="keyword">new</span> User();</span><br><span class="line">    <span class="comment">//生成get方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function">User <span class="title">getUser</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function">String <span class="title">execute</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">//向值栈的user里放数据</span></span><br><span class="line">        user.setUserName(<span class="string">"hello"</span>);</span><br><span class="line">        user.setPassWord(<span class="string">"123456"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>在jsp页面中取值</li>
+</ol>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;s:property <span class="attribute">value</span>=<span class="string">"user.userName"</span>/&gt;</span><br><span class="line">&lt;s:property <span class="attribute">value</span>=<span class="string">"user.passWord"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="3、获取list集合"><a href="#3、获取list集合" class="headerlink" title="3、获取list集合"></a>3、获取list集合</h3><p><strong>在值栈中放入list集合</strong><br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="built_in">List</span>&lt;User&gt; <span class="built_in">list</span> = <span class="literal">new</span> ArrayList&lt;User&gt;();</span><br><span class="line">       <span class="comment">//生成get方法</span></span><br><span class="line">       <span class="keyword">public</span> <span class="built_in">List</span>&lt;User&gt; getList() &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="built_in">list</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       @Override</span><br><span class="line">       <span class="keyword">public</span> <span class="built_in">String</span> execute() throws Exception &#123;</span><br><span class="line">           <span class="comment">//向list中设置值</span></span><br><span class="line">           User user = <span class="literal">new</span> User();</span><br><span class="line">           user.setUserName(<span class="string">"hello"</span>);</span><br><span class="line">           user.setPassWord(<span class="string">"123456"</span>);</span><br><span class="line">           <span class="built_in">list</span>.add(user);</span><br><span class="line">           <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-1第一种方式实现获取list集合"><a href="#3-1第一种方式实现获取list集合" class="headerlink" title="3.1第一种方式实现获取list集合"></a>3.1第一种方式实现获取list集合</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 第一种方式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"list[0].userName"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"list[0].passWord"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-2-第二种方式实现获取list集合"><a href="#3-2-第二种方式实现获取list集合" class="headerlink" title="3.2 第二种方式实现获取list集合"></a>3.2 第二种方式实现获取list集合</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 第二种方式 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 遍历list集合得到list集合里每个user对象 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:iterator</span> <span class="attr">value</span>=<span class="string">"list"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"userName"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"passWord"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:iterator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-3-第三种方式实现获取list集合"><a href="#3-3-第三种方式实现获取list集合" class="headerlink" title="3.3 第三种方式实现获取list集合"></a>3.3 第三种方式实现获取list集合</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 第三种方式 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 遍历list集合得到list集合里每个user对象 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 机制：把每次遍历出来的user对象放大context里</span></span><br><span class="line"><span class="comment">     获取context数据的特点：写ognl表达式，需使用特殊符号#</span></span><br><span class="line"><span class="comment"> --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:iterator</span> <span class="attr">value</span>=<span class="string">"list"</span> <span class="attr">var</span>=<span class="string">"user"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"#user.userName"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"#user.passWord"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:iterator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="4、其他方式向值栈存放、获取数据"><a href="#4、其他方式向值栈存放、获取数据" class="headerlink" title="4、其他方式向值栈存放、获取数据"></a>4、其他方式向值栈存放、获取数据</h3><h4 id="4-1-使用set方法"><a href="#4-1-使用set方法" class="headerlink" title="4.1 使用set方法"></a>4.1 使用set方法</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//调用set方法设置值</span></span><br><span class="line"><span class="built_in">stack</span>.<span class="built_in">set</span>(<span class="string">"username"</span>, <span class="string">"value"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 获取set方法设置的值，根据名称获取 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"username"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-2-使用push方法"><a href="#4-2-使用push方法" class="headerlink" title="4.2 使用push方法"></a>4.2 使用push方法</h4><ul>
+<li>使用push方法设置值，没有名称，只有设置的值</li>
+<li>push方法只接收一个Object类型的参数，可以存放任意类型的对象</li>
+<li>push方法是自动将所存的数据转为对应的对象类型，然后存到值栈 top 数组中 </li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 获取push方法设置的值,通过top数组 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"[0].top"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="八、EL表达式获取值栈数据"><a href="#八、EL表达式获取值栈数据" class="headerlink" title="八、EL表达式获取值栈数据"></a>八、EL表达式获取值栈数据</h2><ul>
+<li>EL表达式获取域对象值<ul>
+<li>为什么El表达式可以获取值栈的数据？</li>
+<li>struts2过滤器增强request对象里面的方法getAttribute方法。<br><strong>在过核心过滤器的时候，对request进行了加强，对request中的getAttribute查找属性方法进行了加强。<br>如果在request域中找不到数据，会默认到值栈中去查找，把值栈的数据取出来，放到域对象里。</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="九、ognl表达式-、-的使用"><a href="#九、ognl表达式-、-的使用" class="headerlink" title="九、ognl表达式#、%的使用"></a>九、ognl表达式#、%的使用</h2><h3 id="1、-使用"><a href="#1、-使用" class="headerlink" title="1、#使用"></a>1、#使用</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 遍历list集合得到list集合里每个user对象 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 机制：把每次遍历出来的user对象放大context里</span></span><br><span class="line"><span class="comment">     获取context数据的特点：写ognl表达式，需使用特殊符号#</span></span><br><span class="line"><span class="comment"> --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:iterator</span> <span class="attr">value</span>=<span class="string">"list"</span> <span class="attr">var</span>=<span class="string">"user"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"#user.userName"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"#user.passWord"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:iterator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 获取context中request的值 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- #context的key名.域对象名称 （key如request） --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">s:property</span> <span class="attr">value</span>=<span class="string">"#request.hello"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="%使用"></a>%使用</h3><ul>
+<li>在struts2标签中表单标签</li>
+<li>在struts2标签里面使用ognl表达式，如果直接在struts2表单标签里面使用ognl表达式不识别，只有%之后才会识别</li>
+</ul>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">name</span>=<span class="string">"userName"</span> <span class="attr">value</span>=<span class="string">"%</span></span></span><span class="template-tag">&#123;#<span class="name">request.hello</span>&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span><span class="tag">&lt;/<span class="name">s:textfield</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://retltdotr.top/2019/04/24/struts2_04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1067,7 +1339,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
