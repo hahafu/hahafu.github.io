@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="struts2学习_01一、struts2概述1、Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，在MVC设计模式中，Struts2作为控制器(Controller)来建立模型与视图的数据交互。2、Struts 2是Struts的下一代产品，是在 struts 1和WebWork的技术基础上进行了合并的全新的Struts 2框架。其全新的Struts 2的">
+<meta name="description" content="struts2学习_061、拦截器概述 Struts2框架中提供的许多功能都是使用拦截器实现的，包括异常处理，文件上传，生命周期回调和验证等。事实上，由于Struts2将其大部分功能基于拦截器，因此不太可能为每个action分配7个或8个拦截器。 拦截器在概念上与servlet过滤器或JDK代理类相同。拦截器允许横切功能，把action以及框架分开实现。你可以使用拦截器实现以下操作：在调用acti">
 <meta name="keywords" content="struts2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="struts2_01">
-<meta property="og:url" content="https://retltdotr.top/2019/04/17/struts2_01/index.html">
+<meta property="og:title" content="struts2_06">
+<meta property="og:url" content="https://retltdotr.top/2019/05/11/struts2_06/index.html">
 <meta property="og:site_name" content="Retltdotr@个人博客">
-<meta property="og:description" content="struts2学习_01一、struts2概述1、Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，在MVC设计模式中，Struts2作为控制器(Controller)来建立模型与视图的数据交互。2、Struts 2是Struts的下一代产品，是在 struts 1和WebWork的技术基础上进行了合并的全新的Struts 2框架。其全新的Struts 2的">
+<meta property="og:description" content="struts2学习_061、拦截器概述 Struts2框架中提供的许多功能都是使用拦截器实现的，包括异常处理，文件上传，生命周期回调和验证等。事实上，由于Struts2将其大部分功能基于拦截器，因此不太可能为每个action分配7个或8个拦截器。 拦截器在概念上与servlet过滤器或JDK代理类相同。拦截器允许横切功能，把action以及框架分开实现。你可以使用拦截器实现以下操作：在调用acti">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-29T14:46:25.905Z">
+<meta property="og:updated_time" content="2019-05-11T12:50:10.097Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="struts2_01">
-<meta name="twitter:description" content="struts2学习_01一、struts2概述1、Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，在MVC设计模式中，Struts2作为控制器(Controller)来建立模型与视图的数据交互。2、Struts 2是Struts的下一代产品，是在 struts 1和WebWork的技术基础上进行了合并的全新的Struts 2框架。其全新的Struts 2的">
+<meta name="twitter:title" content="struts2_06">
+<meta name="twitter:description" content="struts2学习_061、拦截器概述 Struts2框架中提供的许多功能都是使用拦截器实现的，包括异常处理，文件上传，生命周期回调和验证等。事实上，由于Struts2将其大部分功能基于拦截器，因此不太可能为每个action分配7个或8个拦截器。 拦截器在概念上与servlet过滤器或JDK代理类相同。拦截器允许横切功能，把action以及框架分开实现。你可以使用拦截器实现以下操作：在调用acti">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://retltdotr.top/2019/04/17/struts2_01/">
+  <link rel="canonical" href="https://retltdotr.top/2019/05/11/struts2_06/">
 
 
 
 
 
-  <title>struts2_01 | Retltdotr@个人博客</title>
+  <title>struts2_06 | Retltdotr@个人博客</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://retltdotr.top/2019/04/17/struts2_01/">
+    <link itemprop="mainEntityOfPage" href="https://retltdotr.top/2019/05/11/struts2_06/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Retltdotr">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">struts2_01</h1>
+          <h1 class="post-title" itemprop="name headline">struts2_06</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T22:05:01+08:00">
-                2019-04-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-11T20:49:17+08:00">
+                2019-05-11
               </time>
             
 
@@ -367,8 +367,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/17/struts2_01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/17/struts2_01/" itemprop="commentCount"></span>
+                <a href="/2019/05/11/struts2_06/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/11/struts2_06/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -396,26 +396,70 @@
       
 
       
-        <h1 id="struts2学习-01"><a href="#struts2学习-01" class="headerlink" title="struts2学习_01"></a>struts2学习_01</h1><h2 id="一、struts2概述"><a href="#一、struts2概述" class="headerlink" title="一、struts2概述"></a>一、struts2概述</h2><p>1、Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，在MVC设计模式中，Struts2作为控制器(Controller)来建立模型与视图的数据交互。2、Struts 2是Struts的下一代产品，是在 struts 1和WebWork的技术基础上进行了合并的全新的Struts 2框架。其全新的Struts 2的体系结构与Struts 1的体系结构差别巨大。Struts 2以WebWork为核心，采用拦截器的机制来处理用户的请求，这样的设计也使得业务逻辑控制器能够与ServletAPI完全脱离开，所以Struts 2可以理解为WebWork的更新产品。虽然从Struts 1到Struts 2有着太大的变化，但是相对于WebWork，Struts 2的变化很小。</p>
-<h2 id="二、struts2框架入门"><a href="#二、struts2框架入门" class="headerlink" title="二、struts2框架入门"></a>二、struts2框架入门</h2><ul>
-<li>struts2版本为struts-2.3.24</li>
-<li>第一步：导入struts2框架jar包<pre><code>（1）从struts2官网下载完整包解压，在lib目录中有jar包，不能把这些jar包都导入项目中，其中很多jar包用不上
-（2）到apps目录中，找到示例程序解压，然后找到示例程序下的lib目录，复制里面的jar包到自己新建的web项目中    
+        <h1 id="struts2学习-06"><a href="#struts2学习-06" class="headerlink" title="struts2学习_06"></a>struts2学习_06</h1><h2 id="1、拦截器概述"><a href="#1、拦截器概述" class="headerlink" title="1、拦截器概述"></a>1、拦截器概述</h2><ul>
+<li>Struts2框架中提供的许多功能都是使用拦截器实现的，包括异常处理，文件上传，生命周期回调和验证等。事实上，由于Struts2将其大部分功能基于拦截器，因此不太可能为每个action分配7个或8个拦截器。</li>
+<li>拦截器在概念上与servlet过滤器或JDK代理类相同。拦截器允许横切功能，把action以及框架分开实现。你可以使用拦截器实现以下操作：<br><strong>在调用action之前提供预处理逻辑。</strong><br><strong>在调用action后提供后处理逻辑。</strong><br><strong>捕获异常，以便可以执行备用处理。</strong></li>
+</ul>
+<p><strong>拦截器在action对象创建之后，action的方法执行之前执行</strong></p>
+<p>默认执行的拦截器</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;interceptor-stack <span class="built_in">name</span>=<span class="string">"defaultStack"</span>&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"exception"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"alias"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"servletConfig"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"i18n"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"prepare"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"chain"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"scopedModelDriven"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"modelDriven"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"fileUpload"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"checkbox"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"datetime"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"multiselect"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"staticParams"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"actionMappingParams"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"params"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"conversionError"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"validation"</span>&gt;</span><br><span class="line">                    &lt;param <span class="built_in">name</span>=<span class="string">"excludeMethods"</span>&gt;input,<span class="keyword">back</span>,cancel,browse&lt;/param&gt;</span><br><span class="line">                &lt;/interceptor-<span class="keyword">ref</span>&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"workflow"</span>&gt;</span><br><span class="line">                    &lt;param <span class="built_in">name</span>=<span class="string">"excludeMethods"</span>&gt;input,<span class="keyword">back</span>,cancel,browse&lt;/param&gt;</span><br><span class="line">                &lt;/interceptor-<span class="keyword">ref</span>&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"debugging"</span>/&gt;</span><br><span class="line">                &lt;interceptor-<span class="keyword">ref</span> <span class="built_in">name</span>=<span class="string">"deprecation"</span>/&gt;</span><br><span class="line">            &lt;/interceptor-stack&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2、拦截器底层原理"><a href="#2、拦截器底层原理" class="headerlink" title="2、拦截器底层原理"></a>2、拦截器底层原理</h2><h3 id="拦截器底层使用两个原理"><a href="#拦截器底层使用两个原理" class="headerlink" title="拦截器底层使用两个原理"></a>拦截器底层使用两个原理</h3><p><strong>aop思想和责任链模式</strong></p>
+<h4 id="1-aop思想"><a href="#1-aop思想" class="headerlink" title="1 aop思想"></a>1 aop思想</h4><p>Aop是面向切面编程，是一种编程思想，没有具体的实现代码，简单来说就是不通过修改源代码方式扩展功能</p>
+<h4 id="2-责任链模式"><a href="#2-责任链模式" class="headerlink" title="2 责任链模式"></a>2 责任链模式</h4><ul>
+<li>在java中有很多的设计模式，责任链模式是其中的一种</li>
+<li>责任链模式和过滤链很相似的</li>
+<li>责任链模式：<br>要执行多个操作，有添加、修改、删除三个操作。<br>首先执行添加操作，添加操作执行之后 做类似于放行操作，再执行修改操作，修改操作执行之后做类似于放行操作，再执行删除操作</li>
+<li>过滤链：<br>一个请求可有多个过滤器进行过滤，只有通过当前过滤器才能到达下一个过滤器<h4 id="3-aop思想和责任链模式如何应用到拦截器里面"><a href="#3-aop思想和责任链模式如何应用到拦截器里面" class="headerlink" title="3 aop思想和责任链模式如何应用到拦截器里面"></a>3 aop思想和责任链模式如何应用到拦截器里面</h4></li>
+<li>拦截器在action对象创建之后，action的方法执行之前执行</li>
+<li>在action方法执行之前执行默认拦截器，执行过程使用aop思想，在action没有直接调用拦截器的方法，使用配置文件方式进行操作</li>
+<li><p>在执行拦截器时候，执行很多的拦截器，这个过程使用责任链模式。只有通过当前过滤器才能到达下一个过滤器，通过了所有的过滤器才会执行方法</p>
+<p><strong>过程：</strong></p>
+</li>
+</ul>
+<ol>
+<li>执行action<br><code>execute.executeAction(request, response, mapping);</code></li>
+<li>创建action对象，使用动态代理方式<br>` ActionProxy proxy = getContainer().getInstance(ActionProxyFactory.class).createActionProxy(<pre><code>namespace, name, method, extraContext, true, false);`
 </code></pre></li>
-<li>第二部：在web.xml中配置struts过滤器</li>
-</ul>
-<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">filter</span>&gt;</span><br><span class="line">    &lt;<span class="built_in">filter</span>-name&gt;struts&lt;/<span class="built_in">filter</span>-name&gt;</span><br><span class="line">    &lt;<span class="built_in">filter</span>-<span class="keyword">class</span>&gt;org.apache.struts2.dispatcher.ng.<span class="built_in">filter</span>.StrutsPrepareAndExecuteFilter&lt;/<span class="built_in">filter</span>-<span class="keyword">class</span>&gt;</span><br><span class="line">  &lt;/<span class="built_in">filter</span>&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;<span class="built_in">filter</span>-mapping&gt;</span><br><span class="line">    &lt;<span class="built_in">filter</span>-name&gt;struts&lt;/<span class="built_in">filter</span>-name&gt;</span><br><span class="line">    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">  &lt;/<span class="built_in">filter</span>-mapping&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>第三步：创建action<br>  （1）新建一个普通类，然后在类中写execute方法</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">HelloAction</span> <span class="keyword">extends</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *(1)每次访问servlet时，都会执行service方法</span></span><br><span class="line"><span class="comment">     *(2)每次访问action,默认执行execute方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> static <span class="keyword">final</span> long serialVersionUID = <span class="number">1</span>L;</span><br><span class="line"></span><br><span class="line">    public <span class="type">String</span> execute() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"ok"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>第四步：配置action的访问路径<br>  （1）创建struts2核心配置文件， 核心配置文件名称和位置是固定的， 位置必须在src下面，名称 struts.xml<br>  （2）引入dtd约束</p>
-</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE struts PUBLIC</span></span><br><span class="line"><span class="meta">    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"</span></span><br><span class="line"><span class="meta">    "http://struts.apache.org/dtds/struts-2.3.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
-<pre><code>（3）struts.xml配置action访问路径
-</code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- package标签的name属性值为包名，extends="struts-default"就是继承struts-default.xml，它里面定义了许多跳转类型、拦截器等一些常用的东西，namespace：命名空间，默认为'/'表示webapp根目录 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"hello"</span> <span class="attr">extends</span>=<span class="string">"struts-default"</span> <span class="attr">namespace</span>=<span class="string">"/"</span>&gt;</span></span><br><span class="line">    	<span class="comment">&lt;!-- action标签的name属性值为访问名称--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"userAction"</span> <span class="attr">class</span>=<span class="string">"cn.com.action.HelloAction"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">"ok"</span>&gt;</span>/hello.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">action</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>然后把项目部署到Tomcat中，在浏览器中访问，访问路劲为localhost:8080/struts2_test1/userAction.action，<br>localhost:8080表示本机8080端口，也就是Tomcat 服务器端口，后面接上项目名和action名，用“/”隔开</p>
+<li>执行action的方法<br><code>proxy.execute();</code></li>
+<li>执行很多的拦截器，遍历执行<br><code>if ( interceptors .hasNext()) {</code></li>
+<li>执行类似放行操作的方法<br><code>return invocation.invoke();</code></li>
+</ol>
+<h2 id="3、过滤器和拦截器区别"><a href="#3、过滤器和拦截器区别" class="headerlink" title="3、过滤器和拦截器区别"></a>3、过滤器和拦截器区别</h2><ol>
+<li>拦截器是基于java的反射机制的，而过滤器是基于函数回调</li>
+<li>拦截器不依赖于servlet容器，过滤器依赖于servlet容器</li>
+<li><strong>拦截器只能对action请求起作用，而过滤器则可以对几乎所有的请求起作用(包括action、servlet、jsp、html等等)</strong></li>
+<li>拦截器可以访问action上下文、值栈里的对象，而过滤器不能访问</li>
+<li>在action的生命周期中，拦截器可以多次被调用，而过滤器只能在容器初始化时初始化一次。</li>
+</ol>
+<h2 id="4、Servlet和action区别"><a href="#4、Servlet和action区别" class="headerlink" title="4、Servlet和action区别"></a>4、Servlet和action区别</h2><ol>
+<li>servlet默认第一次访问时候创建，创建一次，单实例对象</li>
+<li>action每次访问时候创建，创建多次，多实例对象</li>
+</ol>
+<h2 id="5、自定义拦截器"><a href="#5、自定义拦截器" class="headerlink" title="5、自定义拦截器"></a>5、自定义拦截器</h2><ol>
+<li>在struts2里面有很多的拦截器，这些拦截器是struts2封装的功能，但是在实际开发中，struts2里面的拦截器中可以没有要使用的功能，这个时候需要自己写拦截器实现功能</li>
+<li>拦截器结构<br>(1)查看源代码拦截器结构<br>继承<code>AbstractInterceptor</code>类<br><code>class ModelDrivenInterceptor extends AbstractInterceptor</code><br>打开<code>AbstractInterceptor</code>类<br><code>class AbstractInterceptor implements Interceptor</code><br>有三个方法：<br><code>void init()</code>初始化方法<br><code>void destroy()</code>销毁方法<br><code>String intercept(ActionInvocation invocation) throws Exception</code>拦截逻辑操作<br>(2)开发中，建议使用另外一种方式<br>写类，继承 MethodFilterInterceptor类实现<br>让action里面某个的方法不进行拦截<br>(3)让拦截器和action产生关联<br>不是在action调用拦截器的方法，而是通过配置文件方式让建立关系</li>
+</ol>
+<h2 id="6、自定义登陆拦截器"><a href="#6、自定义登陆拦截器" class="headerlink" title="6、自定义登陆拦截器"></a>6、自定义登陆拦截器</h2><ol>
+<li>需求：在项目中，有很多的action的超链接，需要实现只有在登录的状态下，才可以点击action的超链接实现功能，如果不是登录状态，点击action超链接则返回到登录页面</li>
+<li>登录的状态：使用session域对象实现<br>（1）登录成功之后，把数据放到session里面<br>（2）判断session是否有值，可以知道是否是登录状态</li>
+<li>实现登录的基本功能</li>
+</ol>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="built_in">String</span> login() &#123;</span><br><span class="line">        <span class="comment">//得到request对象</span></span><br><span class="line">        HttpServletRequest request = ServletActionContext.getRequest();</span><br><span class="line">        <span class="built_in">String</span> userName = request.getParameter(<span class="string">"userName"</span>);</span><br><span class="line">        <span class="built_in">String</span> passWord = request.getParameter(<span class="string">"passWord"</span>);</span><br><span class="line">        <span class="comment">//判断用户名和密码是否正确（示例，没有连接数据库操作）</span></span><br><span class="line">        <span class="keyword">if</span>(userName.<span class="keyword">equals</span>(<span class="string">"admin"</span>) &amp;&amp; passWord.<span class="keyword">equals</span>(<span class="string">"123456"</span>)) &#123;</span><br><span class="line">            <span class="comment">//验证成功向session放值</span></span><br><span class="line">            request.getSession().setAttribute(<span class="string">"userName"</span>, userName);</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"loginSuccess"</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//失败，回到登陆页面</span></span><br><span class="line">            <span class="keyword">return</span> <span class="string">"loginUI"</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>添加登录拦截器功能<br>（1）判断是否登录：判断session里面是否有名称是username的值<br>（2）拦截器实现过程<br>第一步 创建类，继承MethodFilterInterceptor类<br>第二步 重写MethodFilterInterceptor类里面的方法写拦截器逻辑</li>
+</ol>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Loginintercept</span> <span class="keyword">extends</span> <span class="title">MethodFilterInterceptor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在这个方法里写拦截器逻辑</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="type">String</span> doIntercept(<span class="type">ActionInvocation</span> invocation) <span class="keyword">throws</span> <span class="type">Exception</span> &#123;</span><br><span class="line">        <span class="comment">//判断session中是否有userName值</span></span><br><span class="line">        <span class="comment">//得到session</span></span><br><span class="line">        <span class="type">HttpServletRequest</span> request = <span class="type">ServletActionContext</span>.getRequest();</span><br><span class="line">        <span class="type">Object</span> <span class="class"><span class="keyword">object</span> </span>= request.getSession().getAttribute(<span class="string">"userName"</span>);</span><br><span class="line">        <span class="comment">//判断</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="class"><span class="keyword">object</span> <span class="title">!=</span> <span class="title">null</span>) </span>&#123;</span><br><span class="line">            <span class="comment">//session中有值，登录状态</span></span><br><span class="line">            <span class="comment">//告诉struts2可以继续执行下面的方法</span></span><br><span class="line">            <span class="keyword">return</span> invocation.invoke();</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//session中没有值，未登录</span></span><br><span class="line">            <span class="comment">//不继续执行下面的action，返回登录页面</span></span><br><span class="line">            <span class="comment">//到struts.xml中result标签中，把返回值配置到登录页面或其他提示页面</span></span><br><span class="line">            <span class="keyword">return</span> <span class="string">"loginUI"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第三步 配置action和拦截器关系（注册拦截器）<br>（1）在要拦截的action标签所在的package标签里声明拦截器</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 声明拦截器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">interceptors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">interceptor</span> <span class="attr">name</span>=<span class="string">"loginIntercept"</span> <span class="attr">class</span>=<span class="string">"cn.com.action.Loginintercept"</span>&gt;</span><span class="tag">&lt;/<span class="name">interceptor</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">interceptors</span></span></span><br></pre></td></tr></table></figure>
+<p>（2）在具体的action中使用声明的拦截器</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 使用自定义拦截器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"loginIntercept"</span>&gt;</span><span class="tag">&lt;/<span class="name">interceptor-ref</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>（3）struts2里面执行很多的默认拦截器，但是如果在action里面配置自定义拦截器<br>默认拦截器就不会执行<br>需要手动启用默认拦截器</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 手动启用默认拦截器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"defaultStack"</span>&gt;</span><span class="tag">&lt;/<span class="name">interceptor-ref</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>配置拦截器，对action里面方法进行拦截<br>（1）在action里面有login的登录的方法，这个方法不需要拦截，如果这个方法都拦截，问题是，永远登录不进去了（拦截器默认拦截action中所有方法）<br>（2）让login方法不进行拦截</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 使用自定义拦截器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">interceptor-ref</span> <span class="attr">name</span>=<span class="string">"loginIntercept"</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- 配置action中某些方法不进行拦截 --&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- neme属性：excludeMethods --&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- 值为不进行拦截的方法名 --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"excludeMethods"</span>&gt;</span>login<span class="tag">&lt;/<span class="name">param</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">interceptor-ref</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注：如果出现嵌套的页面，在提交表单的form标签中加上<code>target=&quot;_parent&quot;</code></p>
 
       
     </div>
@@ -446,15 +490,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/05/08/struts2_05/" rel="next" title="struts2_05">
+                <i class="fa fa-chevron-left"></i> struts2_05
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/17/struts2_02/" rel="prev" title="struts2_02">
-                struts2_02 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -596,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#struts2学习-01"><span class="nav-number">1.</span> <span class="nav-text">struts2学习_01</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、struts2概述"><span class="nav-number">1.1.</span> <span class="nav-text">一、struts2概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、struts2框架入门"><span class="nav-number">1.2.</span> <span class="nav-text">二、struts2框架入门</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#struts2学习-06"><span class="nav-number">1.</span> <span class="nav-text">struts2学习_06</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、拦截器概述"><span class="nav-number">1.1.</span> <span class="nav-text">1、拦截器概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、拦截器底层原理"><span class="nav-number">1.2.</span> <span class="nav-text">2、拦截器底层原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拦截器底层使用两个原理"><span class="nav-number">1.2.1.</span> <span class="nav-text">拦截器底层使用两个原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-aop思想"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">1 aop思想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-责任链模式"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">2 责任链模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-aop思想和责任链模式如何应用到拦截器里面"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">3 aop思想和责任链模式如何应用到拦截器里面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、过滤器和拦截器区别"><span class="nav-number">1.3.</span> <span class="nav-text">3、过滤器和拦截器区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Servlet和action区别"><span class="nav-number">1.4.</span> <span class="nav-text">4、Servlet和action区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、自定义拦截器"><span class="nav-number">1.5.</span> <span class="nav-text">5、自定义拦截器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、自定义登陆拦截器"><span class="nav-number">1.6.</span> <span class="nav-text">6、自定义登陆拦截器</span></a></li></ol></li></ol></div>
             
 
           </div>
